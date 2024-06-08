@@ -9,4 +9,15 @@ use Illuminate\Database\Eloquent\Model;
 class BlogPost extends Model
 {
     use SoftDeletes;
+    protected $fillable = [
+        'category_id',
+        'user_id',
+        'slug',
+        'title',
+        'excerpt',
+        'content_raw',
+        'content_html',
+        'is_published',
+        'published_at',
+    ];
 }

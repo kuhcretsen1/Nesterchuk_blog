@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Blog\Admin;
 
-use Illuminate\Http\Request;
 use App\Models\BlogCategory;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use App\Http\Controllers\Blog\BaseController; // Змінено імпорт
+
+
 
 
 //dd(__METHOD__);
@@ -50,7 +51,11 @@ class CategoryController extends BaseController
      */
     public function edit(string $id)
     {
-        //
+        $item = BlogCategory::findOrFail($id);
+        $categoryList = BlogCategory::all();
+
+        return view('blog.admin.categories.edit', compact('item', 'categoryList'));
+
     }
 
     /**

@@ -32,6 +32,7 @@ $groupData = [
     'namespace' => 'App\Http\Controllers\Blog\Admin',
     'prefix' => 'admin/blog',
 ];
+
 Route::group($groupData, function () {
     //BlogCategory
     $methods = ['index','edit','store','update','create',];

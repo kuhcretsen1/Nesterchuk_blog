@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Blog;
 
+use App\Http\Controllers\Blog\Admin\BaseController;
 use App\Models\BlogPost;
 
 class PostController extends BaseController
