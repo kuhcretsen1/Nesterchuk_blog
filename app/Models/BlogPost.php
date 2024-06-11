@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogPost extends Model
 {
+    use HasFactory; 
     use SoftDeletes;
     protected $fillable = [
         'category_id',
