@@ -38,7 +38,7 @@ class BlogCategoryRepository extends CoreRepository
 
         $result = $this
             ->startConditions()
-            ->select($columns)
+            ->with(['parentCategory:id,title',])
             ->toBase() // не робити колекцію (масив) BlogCategory, отримати дані у вигляді класу
             ->get();
 
