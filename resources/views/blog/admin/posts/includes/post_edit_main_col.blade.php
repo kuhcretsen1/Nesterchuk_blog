@@ -38,10 +38,11 @@
                                 <label for="category_id">Категорія</label>
                                 <select name="category_id" placeholder="Оберіть категорію" id="category_id" class="form-control" required>
                                 @foreach ($categoryList as $categoryOption)
-                                    <option value="{{ $categoryOption->id }}" 
-                                        @if($categoryOption->id == $item->category_id) selected @endif> 
-                                        {{ $categoryOption->id_title }}
-                                    </option>
+                                <option value="{{ $categoryOption->id }}"
+    @if($categoryOption->id == $item->category_id) selected @endif>
+    {{ $categoryOption->title }} <!-- або правильна назва властивості -->
+</option>
+
                                 @endforeach
                                 </select>
                             </div>
